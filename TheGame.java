@@ -10,10 +10,7 @@ import java.util.regex.*;
 public class TheGame {
 
 
-
-
-    public static void main(String[] args) {
-
+    private static List<Property> getGameInitialConfig() {
         List<Property> properties = new ArrayList<Property> ();   
 
         Scanner scan = new Scanner(System.in);
@@ -31,9 +28,13 @@ public class TheGame {
                 inputEnd = true;
             }
             properties.add(property);
-
         }
+
+        return properties;
+    }
+
+    public static void main(String[] args) {
         
-        System.out.println(properties);
+        System.out.println(getGameInitialConfig());
     }
 }
