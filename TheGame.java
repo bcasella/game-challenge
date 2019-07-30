@@ -1,8 +1,11 @@
+
+
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
+
 
 public class TheGame {
 
@@ -11,26 +14,26 @@ public class TheGame {
 
     public static void main(String[] args) {
 
-        List<Integer> list = new ArrayList<Integer> ();   
+        List<Property> properties = new ArrayList<Property> ();   
 
         Scanner scan = new Scanner(System.in);
         Integer in = scan.nextInt();
         boolean inputEnd = false;
         while (!inputEnd) 
         {
-            Integer first = in;
-            Integer second = scan.nextInt();
+            Integer value = in;
+            Integer rent = scan.nextInt();
+            Property property = new Property(value,rent);
             if (scan.hasNext()) {
-                in = scan.nextInt();
+                value = scan.nextInt();
             }
             else {
                 inputEnd = true;
             }
-            list.add(first);
-            list.add(second);
+            properties.add(property);
 
         }
         
-        System.out.println(list);
+        System.out.println(properties);
     }
 }
