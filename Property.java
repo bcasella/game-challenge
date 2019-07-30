@@ -2,15 +2,16 @@
 public class Property {
     private int sellingValue;
     private int rentValue;
-    private String owner;
+    private int owner;
 
     public Property(int sellingValue, int rentValue) {
 
         this.sellingValue = sellingValue;
         this.rentValue = rentValue;
+        this.owner = -1;
     }
 
-    public Property(int sellingValue, int rentValue, String owner) {
+    public Property(int sellingValue, int rentValue, int owner) {
 
         this.sellingValue = sellingValue;
         this.rentValue = rentValue;
@@ -25,7 +26,7 @@ public class Property {
         this.rentValue = rentValue;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(int owner) {
         this.owner = owner;
     }
 
@@ -37,7 +38,7 @@ public class Property {
         return this.rentValue;
     }
 
-    public String setOwner() {
+    public int getOwner() {
         return this.owner;
     }
  }
