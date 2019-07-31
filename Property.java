@@ -2,16 +2,18 @@
 public class Property {
     private int sellingValue;
     private int rentValue;
-    private int owner;
+    private int place;
+    private Gamer owner;
 
-    public Property(int sellingValue, int rentValue) {
+    public Property(int sellingValue, int rentValue, int place) {
 
         this.sellingValue = sellingValue;
         this.rentValue = rentValue;
-        this.owner = -1;
+        this.owner = null;
+        this.place = place;
     }
 
-    public Property(int sellingValue, int rentValue, int owner) {
+    public Property(int sellingValue, int rentValue, Gamer owner) {
 
         this.sellingValue = sellingValue;
         this.rentValue = rentValue;
@@ -26,7 +28,7 @@ public class Property {
         this.rentValue = rentValue;
     }
 
-    public void setOwner(int owner) {
+    public void setOwner(Gamer owner) {
         this.owner = owner;
     }
 
@@ -38,7 +40,11 @@ public class Property {
         return this.rentValue;
     }
 
-    public int getOwner() {
+    public Gamer getOwner() {
         return this.owner;
+    }
+
+    public int getPlace() {
+        return place;
     }
  }
