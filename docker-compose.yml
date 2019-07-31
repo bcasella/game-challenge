@@ -1,0 +1,9 @@
+version: '3'
+services:
+  java-game:
+    container_name: java-game
+    image: openjdk:7
+    volumes:
+    - ./:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    command: bash -c "javac *.java && java TheGame < gameConfig.txt"
