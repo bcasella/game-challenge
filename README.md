@@ -17,4 +17,5 @@ Compiling and running with Java compiler (https://docs.oracle.com/en/java/javase
 On the folder of the source, run:
 
 javac *.java
+
 java TheGame < gameConfig.txt
