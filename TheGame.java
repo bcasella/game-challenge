@@ -127,10 +127,10 @@ public class TheGame {
         }
         //0 = impulsive, 1=demanding, 2=carefull, 3=random
 
-        System.out.println("Numero de partidas do estilo impulsivo (tipo 1): " + countWinnersList.get(0));
-        System.out.println("Numero de partidas do estilo exigente (tipo 2): " + countWinnersList.get(1));
-        System.out.println("Numero de partidas do estilo cauteloso (tipo 3): " + countWinnersList.get(2));
-        System.out.println("Numero de partidas do estilo aleatorio (tipo 4): " + countWinnersList.get(3));
+        System.out.println("Numero de partidas do estilo impulsivo (tipo 1): " + countWinnersList.get(0) + " ou " + (countWinnersList.get(0)*100/numberOfGames) + '%');
+        System.out.println("Numero de partidas do estilo exigente (tipo 2): " + countWinnersList.get(1) + " ou " + (countWinnersList.get(1)*100/numberOfGames) + '%');
+        System.out.println("Numero de partidas do estilo cauteloso (tipo 3): " + countWinnersList.get(2) + " ou " + (countWinnersList.get(2)*100/numberOfGames) + '%');
+        System.out.println("Numero de partidas do estilo aleatorio (tipo 4): " + countWinnersList.get(3) + " ou " + (countWinnersList.get(3)*100/numberOfGames) + '%');
         int humanGamerType = countWinnersList.indexOf(Collections.max(countWinnersList))+1;
         System.out.println("Tipo de jogador que mais ganhou: " + humanGamerType);
 
